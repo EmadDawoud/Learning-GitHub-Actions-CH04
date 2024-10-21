@@ -14,15 +14,15 @@ jobs:
       - name: Step Two
       - run: python hello.py
   job2:
-    name: first job
+    name: second job
     needs: job1
     runs-on: ubuntu-latest
 
     steps:
       - name: Step One
         uses: actions/checkout@v2
-      - name: Step Three
+      - name: Step Two
         uses: actions/upload-artifact@v3.0.0
         with:
           name: ${{ env.ARTIFACT }}
-          path: ./${{ env.ARTIFACT }}.py
+          path: ../../${{ env.ARTIFACT }}.py
