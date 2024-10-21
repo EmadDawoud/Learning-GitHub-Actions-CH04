@@ -11,8 +11,8 @@ jobs:
     steps:
       - name: Step One
         uses: actions/checkout@v2
-      - name: Setup Python environment
-        uses: actions/setup-python@v1.1.1
+      #- name: Setup Python environment
+       # uses: actions/setup-python@v1.1.1
       - name: Step Two
         run: python ../../hello.py
   job2:
