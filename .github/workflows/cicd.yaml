@@ -15,7 +15,7 @@ jobs:
       - run: python hello.py
   job2:
     name: second job
-    needs: job1
+    needs: [job1]
     runs-on: ubuntu-latest
 
     steps:
